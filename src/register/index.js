@@ -8,18 +8,18 @@ import {
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
-export default function Login() {
+export default function Register() {
   const navigate = useNavigate();
-
   return (
     <Card>
-      <Typography variant="h5">Sign in</Typography>
+      <Typography variant="h5">Sign up</Typography>
       <TextField label="Username" />
       <TextField label="Password" type="password" />
-      <Button variant="contained">Log in</Button>
+      <TextField label="Confirm Password" type="password" />
+      <Button variant="contained">Create Account</Button>
       <Typography align="center">
-        Don't have an account?{" "}
-        <Link onClick={() => navigate("/register")}>Register</Link>
+        Already have an account?{" "}
+        <Link onClick={() => navigate("/")}>Log in</Link>
       </Typography>
     </Card>
   );

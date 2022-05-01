@@ -7,15 +7,16 @@ import {
   TextField,
 } from "@mui/material";
 
-export default function Login() {
+export default function Register() {
   return (
     <Card>
-      <Typography variant="h5">Sign in</Typography>
+      <Typography variant="h5">Sign up</Typography>
       <TextField label="Username" />
       <TextField label="Password" type="password" />
-      <Button variant="contained">Log in</Button>
+      <TextField label="Confirm Password" type="password" />
+      <Button variant="contained">Create Account</Button>
       <Typography align="center">
-        Don't have an account? <Link>Register</Link>
+        Already have an account? <Link>Log in</Link>
       </Typography>
     </Card>
   );

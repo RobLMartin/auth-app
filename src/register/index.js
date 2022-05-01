@@ -6,8 +6,10 @@ import {
   Typography,
   TextField,
 } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 export default function Register() {
+  const navigate = useNavigate();
   return (
     <Card>
       <Typography variant="h5">Sign up</Typography>
@@ -16,7 +18,8 @@ export default function Register() {
       <TextField label="Confirm Password" type="password" />
       <Button variant="contained">Create Account</Button>
       <Typography align="center">
-        Already have an account? <Link>Log in</Link>
+        Already have an account?{" "}
+        <Link onClick={() => navigate("/")}>Log in</Link>
       </Typography>
     </Card>
   );

@@ -6,8 +6,11 @@ import {
   Typography,
   TextField,
 } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
+  const navigate = useNavigate();
+
   return (
     <Card>
       <Typography variant="h5">Sign in</Typography>
@@ -15,7 +18,8 @@ export default function Login() {
       <TextField label="Password" type="password" />
       <Button variant="contained">Log in</Button>
       <Typography align="center">
-        Don't have an account? <Link>Register</Link>
+        Don't have an account?{" "}
+        <Link onClick={() => navigate("/register")}>Register</Link>
       </Typography>
     </Card>
   );
